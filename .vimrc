@@ -8,3 +8,10 @@ set number
 
 inoremap jj <ESC>
 
+call plug#begin('~/.vim/surround')
+
+Plug 'tpope/vim-surround'
+
+call plug#end()
+
+
