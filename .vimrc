@@ -58,6 +58,9 @@ map cc <ESC> :
 "   Buffer change
 nnoremap <Leader>b :bNext<CR>
 
+"   Write key-binding
+nnoremap <Leader>w :w<CR>
+
 "   Clipboard Mapping
 vnoremap <C-c> "+y
 inoremap <C-v> <ESC>"+pa
@@ -93,25 +96,25 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'Dimercel/todo-vim', {'on': 'TODOToggle'}
 Plug 'tpope/vim-surround'  " Surround para (),[],{},etc.
+Plug 'tpope/vim-fugitive' "Plugin GIT
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-sneak'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ludovicchabant/vim-gutentags'
-" Plug 'pechorin/any-jump.vim'
 Plug 'arzg/vim-rust-syntax-ext', {'for':['rust']}
 Plug 'rust-lang/rust.vim', {'for':['rust'] }
 Plug 'racer-rust/vim-racer'
-" Plug 'tomasr/molokai'
+Plug 'tomasr/molokai'
 Plug 'dracula/vim'
-" Plug 'severij/vadelma'
+Plug 'severij/vadelma'
 Plug 'arzg/vim-colors-xcode'
-Plug 'tpope/vim-obsession'
 Plug 'davidhalter/jedi-vim', {'for':['python']}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree' "Filetree
 Plug 'scrooloose/nerdcommenter' "Comentarios
 Plug 'vim-scripts/vim-auto-save', {'on': 'AutoSave'} "Autoguardar archivos
-Plug 'tpope/vim-fugitive' "Plugin GIT
 Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim', {'for':'html'}
 Plug 'Yggdroot/indentLine', {'for':['c','java','python']}
@@ -133,10 +136,10 @@ hi Comment cterm=italic
 " hi LineNr ctermbg=NONE guibg=NONE
 
 "   Colorscheme
-" colorscheme molokai
-colorscheme dracula
+colorscheme xcodedarkhc
+" colorscheme coral
 " let g:xcodedarkhc_green_comments = 1
-" let g:molokai_original = 1
+let g:molokai_original = 1
 
 
 "   Devicons
@@ -146,22 +149,25 @@ let g:webdevicons_enable_airline_tabline = 1
 "   Airline theme and settings
 " let g:airline_theme = 'wombat'
 " let g:airline_theme = 'behelit'
-" let g:airline_theme = 'base16_adwaita'
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'base16_adwaita'
+" let g:airline_theme = 'dracula'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_left_sep = ''
-"let g:airline_left_sep = ' '
-let g:airline_left_sep = '||'
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_sep = ' '
-let g:airline_right_sep = '||'
+let g:airline_left_sep = ''
+" let g:airline_left_sep = ' '
+" let g:airline_left_sep = '||'
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+let g:airline_left_alt_sep = ''
+ let g:airline_right_sep = ''
+" let g:airline_right_sep = ' '
+" let g:airline_right_sep = '||'
+" let g:airline_right_sep = ''
 let g:airline_section_c = ''
 "let g:airline_section_x = ''
 let g:airline_section_y = '%{strftime("%H:%M")}'
 let g:airline_section_z = ''
-let g:airline_section_warning = ''
+" let g:airline_section_warning = ''
 let g:airline#extensions#tabline#fnamemod=':t'
 
 "   Statusline settings
