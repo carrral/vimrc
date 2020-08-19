@@ -129,7 +129,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'bruno-/vim-most-minimal-folds'
 Plug 'vim-utils/vim-man' , {'for':['c']}
-Plug 'kkoomen/vim-doge', {'for':['c','python','javascript','rust','bash',]}
+Plug 'kkoomen/vim-doge', {'for':['python','javascript','rust','bash',]}
 Plug 'vim-scripts/DoxygenToolkit.vim', {'for':['c']}
 
 
