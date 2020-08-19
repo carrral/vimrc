@@ -128,7 +128,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-eunuch'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'bruno-/vim-most-minimal-folds'
-Plug 'vim-utils/vim-man'
+Plug 'vim-utils/vim-man' , {'for':['c']}
+Plug 'kkoomen/vim-doge', {'for':['c','python','javascript','rust','bash',]}
+Plug 'vim-scripts/DoxygenToolkit.vim', {'for':['c']}
 
 
 Plug 'ryanoasis/vim-devicons'
@@ -168,7 +170,7 @@ Plug 'daeyun/vim-matlab'
 
 "Linting
 Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for':['rust','c','javascript','typescript','vue','python','sh']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for':['rust','javascript','typescript','c','vue','python','sh']}
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -190,6 +192,10 @@ let g:header_field_modified_by = 0
 let g:header_field_timestamp_format = '%d/%m/%Y'
 let g:header_auto_add_header = 0
 " ================================================
+
+"===================== doxygen-toolkit ========================
+autocmd BufRead,BufNewFile *.h,*.c nnoremap <Leader>d :Dox<CR>
+"==============================================================
 
 
 " ================ vim-man ====================
@@ -342,6 +348,14 @@ let g:ale_sign_error = '=>'
 
 let g:ale_sign_warning = ' '
 let g:ale_lint_on_text_changed = 'always'
+"===========================================================
+
+
+"================== recognize header files as C ============
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
 "===========================================================
 
 
