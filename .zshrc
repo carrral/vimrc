@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="/home/carlos-II/bin/MATLAB/R2017a/bin:$PATH"
+# export PATH="/opt/forticlient:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carlos-II/.oh-my-zsh"
@@ -72,7 +73,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( npm git cargo colored-man-pages  jump)
+plugins=( npm git colored-man-pages jump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,7 +114,7 @@ AUTO_CD="false"
 alias ll="lsd -a1"
 alias l="lsd -1"
 alias c="clear"
-alias vim="vimx"
+alias vim="nvim"
 alias ssp="systemctl suspend"
 alias hiber="systemctl hibernate"
 alias ohmyzsh="mate ~/.oh-my-zsh"
